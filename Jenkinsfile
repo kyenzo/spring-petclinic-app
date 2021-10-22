@@ -10,7 +10,7 @@ node {
         // sh 'docker image list'
         // sh 'docker tag spring-petclinic-app kyenzo/spring-petclinic-app:spring-petclinic-app'
     }
-    
+
     stage("Run tests"){
 
     }
@@ -21,6 +21,6 @@ node {
         
     }
     stage("Deploy Container"){
-        
+        echo "Tests"
     }
 }
