@@ -11,7 +11,7 @@ node
     /* groovylint-disable-next-line LineLength */
     // } // withMaven will discover the generated Maven artifacts, JUnit Surefire & FailSafe reports and FindBugs reports
         // withMaven(maven: 'my-maven', options: [junitPublisher(healthScaleFactor: 1.0)]) {
-        sh 'mvn compile'
+        sh './mvnw package'
         // }
     }
 
