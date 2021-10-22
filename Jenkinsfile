@@ -7,7 +7,7 @@ node
 
     stage('Docker build') {
         withMaven {
-            sh 'mvn package'
+            sh 'mvn compile'
     } // withMaven will discover the generated Maven artifacts, JUnit Surefire & FailSafe reports and FindBugs reports
     }
 
