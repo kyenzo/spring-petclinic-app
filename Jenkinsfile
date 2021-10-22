@@ -6,13 +6,7 @@ node
     }
 
     stage('Docker build') {
-    //     withMaven {
-    //         sh 'mvn compile'
-    /* groovylint-disable-next-line LineLength */
-    // } // withMaven will discover the generated Maven artifacts, JUnit Surefire & FailSafe reports and FindBugs reports
-        // withMaven(maven: 'my-maven', options: [junitPublisher(healthScaleFactor: 1.0)]) {
-        sh 'sudo ./mvnw package'
-        // }
+         sh '''./mvnw package'''
     }
 
     stage('Run tests') {
