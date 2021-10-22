@@ -28,7 +28,7 @@ pipeline
         stage('Push Image') {
         }
         stage('Deploy Container') {
-            echo 'Tests'
+            
         }
     }
 }
