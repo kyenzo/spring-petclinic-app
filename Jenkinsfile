@@ -6,7 +6,7 @@ node
     }
 
     stage('Docker build') {
-         sh '''./mvnw package'''
+         sh '''mvn compile'''
     }
 
     stage('Run tests') {
