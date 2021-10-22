@@ -11,7 +11,7 @@ pipeline
 
         stage('Docker build') {
             steps {
-                    sh '''mvn compile'''
+                    sh 'mvn compile -X > debug.log'
             }
         }
 
