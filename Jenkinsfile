@@ -1,34 +1,40 @@
 /* groovylint-disable-next-line CompileStatic */
 pipeline
 {
-   agent any
+    agent any
     stages {
         stage('Git Clone') {
-             steps {
+            steps {
                 git credentialsId: 'GIT_HUB_CREDENTIALS', url: 'https://github.com/kyenzo/spring-petclinic-app.git'
-             }      
+            }
         }
 
         stage('Docker build') {
             steps {
                     sh '''mvn compile'''
-                }
-            
+            }
         }
 
         stage('Run tests') {
+            steps {
+            }
         }
 
         stage('Build Image') {
-        // sh 'docker version'
-        // sh 'docker build -t spring-petclinic-app .'
-        // sh 'docker image list'
-        // sh 'docker tag spring-petclinic-app kyenzo/spring-petclinic-app:spring-petclinic-app'
+            // sh 'docker version'
+            // sh 'docker build -t spring-petclinic-app .'
+            // sh 'docker image list'
+            // sh 'docker tag spring-petclinic-app kyenzo/spring-petclinic-app:spring-petclinic-app'
+            steps {
+            }
         }
         stage('Push Image') {
+            steps {
+            }
         }
         stage('Deploy Container') {
-            
+            steps {
+            }
         }
     }
 }
