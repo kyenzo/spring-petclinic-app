@@ -17,7 +17,7 @@ pipeline {
 
         stage ('Build') {
             steps {
-                sh 'mvn -Dmaven.test.failure.ignore=true install' 
+                sh 'mvn -Dmaven.test.failure.ignore=true -Dcheckstyle.skip install' 
             }
             post {
                 success {
